@@ -38,7 +38,7 @@ public class SingleJenkinsTest {
 		capability.setCapability(CapabilityType.BROWSER_NAME, browser);
 		capability.setCapability(CapabilityType.VERSION, version);
 		capability.setCapability(CapabilityType.PLATFORM, os);
-		capability.setCapability("build", System.getenv("LT_BUILD"));
+		capability.setCapability("build", System.getenv("LT_BUILD_NAME"));
 		capability.setCapability("name", "Single Junit Jenkins Test");
 		capability.setCapability("screen_resolution", res);
 		capability.setCapability("network", true);
@@ -54,7 +54,7 @@ public class SingleJenkinsTest {
 	@Test
 	public void test() {
 		System.out.println("***********************");
-		System.out.println(System.getenv("LT_BUILD"));
+		System.out.println(System.getenv("LT_BUILD_NAME"));
 		System.out.println("***********************");
 		// Launch the app
 		driver.get("https://lambdatest.github.io/sample-todo-app/");
