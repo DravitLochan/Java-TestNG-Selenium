@@ -53,6 +53,9 @@ public class SingleJenkinsTest {
 
 	@Test
 	public void test() {
+		System.out.println("***********************");
+		System.out.println(System.getenv("LT_BUILD"));
+		System.out.println("***********************");
 		// Launch the app
 		driver.get("https://lambdatest.github.io/sample-todo-app/");
 
